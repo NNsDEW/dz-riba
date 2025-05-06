@@ -1,13 +1,13 @@
 using System;
 
-public class ConsoleNovel
+public class Novel
 {
     static int currentIteration = 1;
-    static int endingReached = 0; // 0 - нет, 1-10 - номер концовки
+    static int endingReached = 0; 
 
     public static void Main(string[] args)
     {
-        Console.WriteLine("Добро пожаловать в консольную новеллу!");
+        Console.WriteLine("прив это новелла");
 
         while (currentIteration <= 20 && endingReached == 0)
         {
@@ -18,12 +18,12 @@ public class ConsoleNovel
 
         if (endingReached > 0)
         {
-            Console.WriteLine($"\n--- Концовка {endingReached} ---");
+            Console.WriteLine($"\n Концовка {endingReached}");
             ShowEnding(endingReached);
         }
         else
         {
-            Console.WriteLine("\nИгра окончена. Ни одна концовка не достигнута.");
+            Console.WriteLine("\nИгра овер. Ни одна концовка не достигнута(лол).");
         }
 
         Console.WriteLine("\nСпасибо за игру!");
@@ -39,18 +39,17 @@ public class ConsoleNovel
             case 2:
                 Iteration2();
                 break;
-            // ... (до 20 итераций)
+      
             default:
-                Console.WriteLine("Вы достигли конца доступного контента.");
-                endingReached = 1; // Пример достижения концовки
+                Console.WriteLine("нет");
+                endingReached = 1; 
                 break;
         }
     }
-
-    //  Далее идут функции для каждой итерации, например:
+    
     static void Iteration1()
     {
-        Console.WriteLine("Вы находитесь в темной комнате. Что делаете?");
+        Console.WriteLine("Вы находитесь в темной комнате. Что будете делать?");
         Console.WriteLine("1. Включить свет.");
         Console.WriteLine("2. Искать выход на ощупь.");
 
@@ -59,12 +58,12 @@ public class ConsoleNovel
         if (choice == "1")
         {
             Console.WriteLine("Вы включили свет и увидели, что находитесь в лаборатории.");
-            // Дальнейшие варианты выбора и последствия
+           
         }
         else if (choice == "2")
         {
             Console.WriteLine("Вы наткнулись на что-то и упали.");
-            // Дальнейшие варианты выбора и последствия
+
         }
         else
         {
@@ -83,13 +82,13 @@ public class ConsoleNovel
         if (choice == "1")
         {
             Console.WriteLine("Компьютер включился, но на экране только текст.");
-            // Дальнейшие варианты выбора и последствия
-            endingReached = 2; // Пример достижения другой концовки
+        
+            endingReached = 2; 
         }
         else if (choice == "2")
         {
             Console.WriteLine("Вы решили не трогать компьютер.");
-            // Дальнейшие варианты выбора и последствия
+            
         }
         else
         {
@@ -97,7 +96,6 @@ public class ConsoleNovel
         }
     }
 
-    // Функции для показа концовок:
     static void ShowEnding(int endingNumber)
     {
         switch (endingNumber)
@@ -108,9 +106,9 @@ public class ConsoleNovel
             case 2:
                 Console.WriteLine("Текст на компьютере гласит: 'Вы - часть эксперимента'. Конец.");
                 break;
-            // ... (до 10 концовок)
+        
             default:
-                Console.WriteLine("Неизвестная концовка.");
+                Console.WriteLine("1 концовка.");
                 break;
         }
     }
